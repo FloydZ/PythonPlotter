@@ -1,9 +1,9 @@
 { pkgs ? import <nixpkgs> {} }:
 let
-  my-python = pkgs.python3.10;
+  my-python = pkgs.python3;
   python-with-my-packages = my-python.withPackages (p: with p; [
     pandas
-   	mathplotlib 
+   	matplotlib 
   ]);
 in
 pkgs.mkShell {
